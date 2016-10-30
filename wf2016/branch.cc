@@ -1,5 +1,6 @@
 // ICPCLA:7577
 // Problem B: Branch Assignment
+// BROKEN: WA SAMPLE
 
 #include<bits/stdc++.h>
 using namespace std;
