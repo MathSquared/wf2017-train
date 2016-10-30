@@ -43,17 +43,20 @@ struct node {
 };
 
 int main() {
-    int rs;cin>>rs;
-    int k;cin>>k;
-    set<string> fp;
-    while(rs-->0) {
-        int v;cin>>v;
-        node t = node(v);
-        for (int i = 1; i < k; i++) {
-            cin>>v;
-            t.insert(v);
+    while (!feof(stdin)) {
+        int rs;cin>>rs;
+        int k;cin>>k;
+        if(feof(stdin)) exit(0);
+        set<string> fp;
+        while(rs-->0) {
+            int v;cin>>v;
+            node t = node(v);
+            for (int i = 1; i < k; i++) {
+                cin>>v;
+                t.insert(v);
+            }
+            fp.insert(t.fprint());
         }
-        fp.insert(t.fprint());
+        cout<<fp.size()<<endl;
     }
-    cout<<fp.size();
 }
